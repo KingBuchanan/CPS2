@@ -63,7 +63,7 @@ void ComplexNumber::ShowBothValues(){
 	{
 		 if (imaginaryPart < 0) signR = '-';
 		 cout<<form<<":  "<< realPart << ' ' << signR << ' ' <<"j"<<(imaginaryPart)<<endl;
-
+		
 
 
 //		      double x=realPart;
@@ -71,6 +71,7 @@ void ComplexNumber::ShowBothValues(){
 		 	  double PolarValue=sqrt(pow(x,2)+pow(y,2));
 
 		 	    if (angle < 0) signR = '-';
+				cout<<fixed<<setw(6)<<setprecision(2);
 		 	 cout<<"P:"<<PolarValue<<"< " <<angle<<endl;
 }
 	else if (form =='p')
@@ -81,7 +82,8 @@ void ComplexNumber::ShowBothValues(){
 		ImagPolar=realPart*sin(imaginaryPart*(3.14159/180));
 
 		 if (ImagPolar < 0) signP = '-';
-		cout<< "\nR:"<< RealPolar << ' ' << signP << ' ' <<"j"<<(ImagPolar)<<endl;
+		 cout<<fixed<<setw(6)<<setprecision(2);
+		cout<< "   R:"<< RealPolar << ' ' << signP << ' ' <<"j"<<(ImagPolar)<<endl;
 	}
 	else
 		cout<<"Incorrect Value Inputted please reconsider."<<endl;

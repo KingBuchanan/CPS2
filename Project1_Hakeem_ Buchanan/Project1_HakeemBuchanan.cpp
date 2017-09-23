@@ -109,7 +109,7 @@ ComplexNumber ComplexNumber::operator -(const ComplexNumber& numb1){// Subtracti
 ComplexNumber ComplexNumber::operator*(const ComplexNumber& numb1){// Multiplication OVERLOADED
 	ComplexNumber temp;
 	temp.realPart = ((realPart * numb1.realPart)-(numb1.imaginaryPart*imaginaryPart));
-	temp.imaginaryPart = ((imaginaryPart*numb1.realPart)+(imaginaryPart*numb1.realPart));
+	temp.imaginaryPart = ((imaginaryPart*numb1.realPart)+(numb1.imaginaryPart*realPart));
 	 return temp;
 }
 ComplexNumber ComplexNumber::operator/(const ComplexNumber& numb1){ //Division OVERLOADED

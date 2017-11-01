@@ -1,0 +1,60 @@
+//============================================================================
+// Name        : Homework11.3
+// Author      : hakeem s Buchanan
+// Description : Questions 6 and 10 editing the complex class below to add different operator overwrites
+//============================================================================
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+// declaration section
+
+class Complex
+
+{
+ private:
+ double realPart; // declare realPart as a double variable
+ double imaginaryPart; // declare imaginaryPart as a double variable
+ public:
+ Complex(double real = 0.0, double imag = 0.0) // inline constructor
+ {realPart = real; imaginaryPart = imag;}
+ void showComplexValues(); // accessor prototype
+ void assignNewValues(double real, double imag); // inline mutator
+ Complex operator*(const Complex&);
+ Complex operator-(const Complex&);// prototype for the addition operator
+}; // end of class declaration
+// implementation section
+void Complex::showComplexValues() // accessor
+{
+ char sign = '+';
+ if (imaginaryPart < 0) sign = '-';
+ cout << realPart << ' ' << sign << ' ' <<(imaginaryPart) << 'i';
+
+}
+Complex Complex::operator-(const Complex& complex2)
+{
+ temp.realPart = realPart - complex2.realPart;
+ temp.imaginaryPart = imaginaryPart - complex2.imaginaryPart;
+ return temp;
+}
+
+Complex Complex::operator*(const Complex& complex2)
+{
+ Complex temp;
+ temp.realPart = ((realPart * complex2.imaginaryPart)-(complex2.imaginaryPart*complex2.realPart));
+ temp.imaginaryPart = ((realPart*complex2.imaginaryPart)+(imaginaryPart*complex2.realPart));;
+ return temp;
+}
+int main()
+{
+ Complex a(2.3, 10.5), b(6.3, 19.2), c; // declare three objects
+ cout << "Complex number a is ";
+  a.showComplexValues();
+  cout << "\nComplex number b is ";
+  b.showComplexValues();
+  //c = a * b;
+  c=a-b;
+  cout << "\n\nThe sum of a and b: ";
+  c.showComplexValues();
+  return 0;
+ }

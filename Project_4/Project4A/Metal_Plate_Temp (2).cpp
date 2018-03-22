@@ -8,7 +8,7 @@
 // Under steady-state conditions, the temperature at any point on the
 // surface of a metal plate will be the average of the temperatures of
 // all the points surrounding it.  This fact can be used in an iterative
-// procedure to calculate the temperature distribution at all points on a 
+// procedure to calculate the temperature distribution at all points on a
 // plane.
 //
 // Figure #1 shows a square plate divided into 100 squares or nodes by a
@@ -106,23 +106,23 @@ int main()
 	// Display the temperatures (initial values) of the plate
 	p1.displayPlate();
 
-	// Display one '*' to the screen and perform one iteration of new
-	// temperature calculations. Continue this process until the change
-	// in temperature for all nodes is less-then 0.01 degrees.
-	//do
-	//{
-		//cout << '*';
-	//}
-	//while(!p1.distributeHeat());
-
-	// Display the temperatures (steady-state values) of the plate
-	//cout << endl;
-	//p1.displayPlate();
-
-	// Display the temperature of node (4,4).  If correct, this value
-	// will equal 29.43
-	///cout << "The Steady-State Temperature for Segment (4,4) is : ";
-	//cout << p1.plateValue(4,4) << endl;
+//	// Display one '*' to the screen and perform one iteration of new
+//	// temperature calculations. Continue this process until the change
+//	// in temperature for all nodes is less-then 0.01 degrees.
+//	do
+//	{
+//		cout << '*';
+//	}
+//	while(!p1.distributeHeat());
+//
+//	// Display the temperatures (steady-state values) of the plate
+//	cout << endl;
+//	p1.displayPlate();
+//
+//	// Display the temperature of node (4,4).  If correct, this value
+//	// will equal 29.43
+//	cout << "The Steady-State Temperature for Segment (4,4) is : ";
+//	cout << p1.plateValue(4,4) << endl;
 
     return 0;
 }
